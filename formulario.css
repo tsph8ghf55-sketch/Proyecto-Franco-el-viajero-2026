@@ -1,0 +1,107 @@
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+.navbar-brand span {
+  font-family: "Sancreek", serif;
+  color: white;
+}
+
+.nav-link {
+  font-family: "Finger Paint", sans-serif;
+  font-size: 1.1rem;
+  color: white !important;
+}
+
+.nav-link:hover {
+  color: #ffc107 !important;
+}
+
+body{
+    background-image: url(IMG/pexels-chiecharon-705075.jpg);
+    margin: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+a{
+    padding: 1em;
+    text-align: center;
+    margin: 0;
+    font-size: larger;
+    text-decoration: none;
+    color: rgb(216, 13, 13);
+    font-family: "Finger Paint", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-family: "Sancreek", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+h1{
+    text-align: center;
+    color: #222;
+    margin-bottom: 1em;
+
+}
+
+section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 2em;
+    gap: 1em;
+    align-items: center;
+}
+
+img{
+    width: 100%;
+    max-width: 800px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+input[type], select {
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 70%;
+    padding: 8px;
+    color: #333;
+    
+}
+.form{
+    background-color: rgba(255, 255, 255, 0.85); 
+    padding: 2em;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    width: 80%;
+    margin: auto;
+    text-align: center;  
+    
+}
+textarea{
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+.reflex{
+    background-color: rgba(255, 255, 255, 0.85); 
+    padding: 2em;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    width: 80%;
+    margin: auto;
+    text-align: center;  
+    font-family: cursive;
+}
+

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda - Franco el Viajero</title>
+    <link rel="stylesheet" href="tienda.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Finger+Paint&family=Sancreek&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Finger+Paint&family=Protest+Riot&family=Sancreek&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Finger+Paint&family=Mynerve&family=Protest+Riot&family=Sancreek&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+   <nav class="navbar navbar-expand-lg bg-dark navbar-dark px-4 animate__animated animate__fadeInDown sticky-top">
+    <a class="navbar-brand d-flex align-items-center" href="inicio.html">
+      <img src="IMG/logo.png.jpg" alt="Logo" height="50" class="me-2">
+      <span class="fs-4">Franco el Viajero</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="menuNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="inicio.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="formulario.html">Inscripción por club</a></li>
+        <li class="nav-item"><a class="nav-link active" href="tienda.html">Tienda</a></li>
+        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+        <li class="nav-item">
+            <button class="btn btn-link nav-link position-relative" id="cart-icon">
+                <i class="fas fa-shopping-cart fa-lg"></i>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cart-count">
+                    0
+                </span>
+            </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+<section class="video animate__animated animate__fadeIn">
+  <div class="hero-content container">
+    <h2 class="text-center mb-5">🛒 Tienda de Productos</h2>
+    <div class="ratio ratio-16x9">
+      <iframe src="https://www.youtube.com/embed/HC2rzFqcB7A" 
+              title="YouTube video player" 
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<section class="store-section">
+    <div class="container">
+        <h2 class="text-center mb-5">Accesorios para ti</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card">
+                    <img src="IMG/Casco 1.jpg" class="card-img-top" alt="Producto 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Guantes FOX</h5>
+                        <p class="card-text">Ideal para todos tus viajes con estilo y seguridad.</p>
+                        <p class="card-text price fw-bold">$45.000</p>
+                        <button class="btn btn-success w-100 mt-2 add-to-cart-btn" data-product-id="1">Añadir al carrito 🛍️</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="IMG/CHAQUETA 1.jpg" class="card-img-top" alt="Producto 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Casco BELL</h5>
+                        <p class="card-text">Protégete de una caida.</p>
+                        <p class="card-text price fw-bold">$120.000</p>
+                        <button class="btn btn-success w-100 mt-2 add-to-cart-btn" data-product-id="2">Añadir al carrito 🛍️</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="IMG/GUANTES 1.webp" class="card-img-top" alt="Producto 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Chaqueta de aventura</h5>
+                        <p class="card-text">Resistentes y cómodas para explorar el mundo.</p>
+                        <p class="card-text price fw-bold">$180.000</p>
+                        <button class="btn btn-success w-100 mt-2 add-to-cart-btn" data-product-id="3">Añadir al carrito 🛍️</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Modal del Carrito -->
+<div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-header border-secondary">
+        <h5 class="modal-title" id="cartModalLabel">Tu Carrito de Compras</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div id="cart-items-container">
+            <!-- Los ítems del carrito se insertarán aquí con JavaScript -->
+        </div>
+        <hr class="border-secondary">
+        <div class="d-flex justify-content-between align-items-center">
+            <h4>Total:</h4>
+            <h4 id="cart-total">$0.00</h4>
+        </div>
+      </div>
+      <div class="modal-footer border-secondary">
+        <button type="button" class="btn btn-danger" id="clear-cart-btn">Vaciar Carrito</button>
+        <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Seguir Comprando</button>
+        <button type="button" class="btn btn-success" id="checkout-btn">Proceder al Pago</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<footer class="bg-dark text-white text-center py-4">
+  <div class="container">
+    <h5 id="redes">Síguenos en nuestras redes sociales</h5>
+    <div class="d-flex justify-content-center my-3 gap-4">
+      <a href="https://www.tiktok.com/@franco_el_viajero" target="_blank" class="text-white fs-4" aria-label="TikTok">
+        <i class="fab fa-tiktok"></i>
+      </a>
+      <a href="https://www.facebook.com/norbey.valenciafranco" target="_blank" class="text-white fs-4" aria-label="Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://www.instagram.com/franco_el_viajero" target="_blank" class="text-white fs-4" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://youtube.com/@franco_el_viajero" target="_blank" class="text-white fs-4" aria-label="YouTube">
+        <i class="fab fa-youtube"></i>
+      </a>
+    </div>
+    <p class="mb-0">&copy; 2025 Franco el Viajero. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+
+<script src="tienda.js"></script>
+</body>
+</html>
