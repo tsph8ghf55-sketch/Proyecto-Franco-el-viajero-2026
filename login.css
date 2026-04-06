@@ -17,12 +17,12 @@
 }
 
 .navbar-brand span {
-  font-family: "Sancreek", serif;
+  font-family: "Roboto", sans-serif;
   color: white;
 }
 
 .nav-link {
-  font-family: "Finger Paint", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1.1rem;
   color: white !important;
 }
@@ -37,7 +37,7 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-
+    font-family: "Roboto", sans-serif;
 }
 a{
     padding: 1em; 
@@ -46,10 +46,7 @@ a{
     font-size: larger;
     text-decoration: none;
     color: rgb(249, 245, 245);
-    font-family: "Finger Paint", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-family: "Sancreek", serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
