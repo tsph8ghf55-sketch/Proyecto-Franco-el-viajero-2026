@@ -1,5 +1,9 @@
 /* Estilos para el carrito */
 
+body {
+    font-family: "Roboto", sans-serif;
+}
+
 #cart-icon {
     border: none;
     color: white;
